@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bunny_dns.enums &mdash; bunny-dns  documentation</title>
+  <title>bunnydns.enums &mdash; bunnydns  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
 
@@ -29,7 +29,7 @@
           
           
           <a href="../../index.html" class="icon icon-home">
-            bunny-dns
+            bunnydns
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -50,7 +50,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">bunny-dns</a>
+          <a href="../../index.html">bunnydns</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -59,7 +59,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
-      <li class="breadcrumb-item active">bunny_dns.enums</li>
+      <li class="breadcrumb-item active">bunnydns.enums</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -68,7 +68,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <h1>Source code for bunny_dns.enums</h1><div class="highlight"><pre>
+  <h1>Source code for bunnydns.enums</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Enumerations used across the Bunny DNS API.&quot;&quot;&quot;</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
@@ -77,7 +77,7 @@
 
 
 <div class="viewcode-block" id="RecordType">
-<a class="viewcode-back" href="../../api.html#bunny_dns.RecordType">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.RecordType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">RecordType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;DNS record type.&quot;&quot;&quot;</span>
     <span class="n">A</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
@@ -120,7 +120,7 @@
 
 
 <div class="viewcode-block" id="MonitorStatus">
-<a class="viewcode-back" href="../../api.html#bunny_dns.MonitorStatus">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.MonitorStatus">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MonitorStatus</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Health-monitor status of a DNS record.&quot;&quot;&quot;</span>
     <span class="n">UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;Unknown&quot;</span>
@@ -137,7 +137,7 @@
 
 
 <div class="viewcode-block" id="MonitorType">
-<a class="viewcode-back" href="../../api.html#bunny_dns.MonitorType">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.MonitorType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MonitorType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Health-monitor type of a DNS record.&quot;&quot;&quot;</span>
     <span class="n">NONE</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
@@ -156,7 +156,7 @@
 
 
 <div class="viewcode-block" id="SmartRoutingType">
-<a class="viewcode-back" href="../../api.html#bunny_dns.SmartRoutingType">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.SmartRoutingType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SmartRoutingType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Smart routing mode for a DNS record.&quot;&quot;&quot;</span>
     <span class="n">NONE</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
@@ -173,7 +173,7 @@
 
 
 <div class="viewcode-block" id="AccelerationStatus">
-<a class="viewcode-back" href="../../api.html#bunny_dns.AccelerationStatus">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.AccelerationStatus">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AccelerationStatus</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Acceleration status of a DNS record.&quot;&quot;&quot;</span>
     <span class="n">NONE</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
@@ -194,7 +194,7 @@
 
 
 <div class="viewcode-block" id="LogAnonymizationType">
-<a class="viewcode-back" href="../../api.html#bunny_dns.LogAnonymizationType">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.LogAnonymizationType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LogAnonymizationType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Log anonymization mode for a DNS zone.&quot;&quot;&quot;</span>
     <span class="n">ONE_DIGIT</span> <span class="o">=</span> <span class="s2">&quot;OneDigit&quot;</span>
@@ -209,7 +209,7 @@
 
 
 <div class="viewcode-block" id="CertificateKeyType">
-<a class="viewcode-back" href="../../api.html#bunny_dns.CertificateKeyType">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.CertificateKeyType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CertificateKeyType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Private-key type used for automatic TLS certificates.&quot;&quot;&quot;</span>
     <span class="n">ECDSA</span> <span class="o">=</span> <span class="s2">&quot;Ecdsa&quot;</span>

@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bunny_dns.exceptions &mdash; bunny-dns  documentation</title>
+  <title>bunnydns.exceptions &mdash; bunnydns  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
 
@@ -29,7 +29,7 @@
           
           
           <a href="../../index.html" class="icon icon-home">
-            bunny-dns
+            bunnydns
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -50,7 +50,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">bunny-dns</a>
+          <a href="../../index.html">bunnydns</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -59,7 +59,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
-      <li class="breadcrumb-item active">bunny_dns.exceptions</li>
+      <li class="breadcrumb-item active">bunnydns.exceptions</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -68,33 +68,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <h1>Source code for bunny_dns.exceptions</h1><div class="highlight"><pre>
+  <h1>Source code for bunnydns.exceptions</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Exception classes for the Bunny DNS API client.&quot;&quot;&quot;</span>
 
 
 <div class="viewcode-block" id="BunnyDNSException">
-<a class="viewcode-back" href="../../api.html#bunny_dns.BunnyDNSException">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSException">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Base exception for all Bunny DNS API errors.&quot;&quot;&quot;</span></div>
 
 
 
 <div class="viewcode-block" id="BunnyDNSAuthenticationError">
-<a class="viewcode-back" href="../../api.html#bunny_dns.BunnyDNSAuthenticationError">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSAuthenticationError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSAuthenticationError</span><span class="p">(</span><span class="n">BunnyDNSException</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when the API returns a 401 Unauthorized response.&quot;&quot;&quot;</span></div>
 
 
 
 <div class="viewcode-block" id="BunnyDNSNotFoundError">
-<a class="viewcode-back" href="../../api.html#bunny_dns.BunnyDNSNotFoundError">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSNotFoundError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSNotFoundError</span><span class="p">(</span><span class="n">BunnyDNSException</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when the API returns a 404 Not Found response.&quot;&quot;&quot;</span></div>
 
 
 
 <div class="viewcode-block" id="BunnyDNSAPIError">
-<a class="viewcode-back" href="../../api.html#bunny_dns.BunnyDNSAPIError">[docs]</a>
+<a class="viewcode-back" href="../../api.html#bunnydns.BunnyDNSAPIError">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">BunnyDNSAPIError</span><span class="p">(</span><span class="n">BunnyDNSException</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised for any other non-success HTTP status code.&quot;&quot;&quot;</span>
 

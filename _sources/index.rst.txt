@@ -1,4 +1,4 @@
-bunny-dns
+bunnydns
 =========
 
 A Python SDK for the `Bunny.net <https://bunny.net>`_ DNS API.
@@ -14,14 +14,14 @@ Installation
 
 .. code-block:: bash
 
-   pip install bunny-dns
+   pip install bunnydns
 
 Quick Start
 -----------
 
 .. code-block:: python
 
-   from bunny_dns import BunnyDNS
+   from bunnydns import BunnyDNS
 
    client = BunnyDNS(access_key="your-api-key")
    zones = client.list_dns_zones()

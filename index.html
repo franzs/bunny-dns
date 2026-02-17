@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bunny-dns &mdash; bunny-dns  documentation</title>
+  <title>bunnydns &mdash; bunnydns  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
@@ -31,7 +31,7 @@
           
           
           <a href="#" class="icon icon-home">
-            bunny-dns
+            bunnydns
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,7 +52,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">bunny-dns</a>
+          <a href="#">bunnydns</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -60,7 +60,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">bunny-dns</li>
+      <li class="breadcrumb-item active">bunnydns</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -70,8 +70,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="bunny-dns">
-<h1>bunny-dns<a class="headerlink" href="#bunny-dns" title="Link to this heading"></a></h1>
+  <section id="bunnydns">
+<h1>bunnydns<a class="headerlink" href="#bunnydns" title="Link to this heading"></a></h1>
 <p>A Python SDK for the <a class="reference external" href="https://bunny.net">Bunny.net</a> DNS API.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
@@ -87,13 +87,13 @@
 </div>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>bunny-dns
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>bunnydns
 </pre></div>
 </div>
 </section>
 <section id="quick-start">
 <h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">bunny_dns</span><span class="w"> </span><span class="kn">import</span> <span class="n">BunnyDNS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">bunnydns</span><span class="w"> </span><span class="kn">import</span> <span class="n">BunnyDNS</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">BunnyDNS</span><span class="p">(</span><span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;your-api-key&quot;</span><span class="p">)</span>
 <span class="n">zones</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">list_dns_zones</span><span class="p">()</span>
