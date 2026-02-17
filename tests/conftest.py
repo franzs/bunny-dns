@@ -3,7 +3,7 @@
 import pytest
 import responses
 
-from bunny_dns import BunnyDNS
+from bunnydns import BunnyDNS
 
 
 @pytest.fixture

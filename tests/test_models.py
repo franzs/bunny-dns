@@ -2,7 +2,7 @@
 
 import pytest
 
-from bunny_dns import (
+from bunnydns import (
     AccelerationStatus,
     CertificateKeyType,
     LogAnonymizationType,
@@ -11,7 +11,7 @@ from bunny_dns import (
     RecordType,
     SmartRoutingType,
 )
-from bunny_dns.models import (
+from bunnydns.models import (
     DnsRecord,
     DnsRecordInput,
     DnsSecDsRecord,

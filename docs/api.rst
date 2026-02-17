@@ -4,75 +4,75 @@ API Reference
 Client
 ------
 
-.. autoclass:: bunny_dns.BunnyDNS
+.. autoclass:: bunnydns.BunnyDNS
    :members:
    :undoc-members:
 
 Models
 ------
 
-.. autoclass:: bunny_dns.DnsZone
+.. autoclass:: bunnydns.DnsZone
    :members:
 
-.. autoclass:: bunny_dns.DnsZoneList
+.. autoclass:: bunnydns.DnsZoneList
    :members:
 
-.. autoclass:: bunny_dns.DnsRecord
+.. autoclass:: bunnydns.DnsRecord
    :members:
 
-.. autoclass:: bunny_dns.DnsRecordInput
+.. autoclass:: bunnydns.DnsRecordInput
    :members:
 
-.. autoclass:: bunny_dns.DnsSecDsRecord
+.. autoclass:: bunnydns.DnsSecDsRecord
    :members:
 
-.. autoclass:: bunny_dns.DnsZoneImportResult
+.. autoclass:: bunnydns.DnsZoneImportResult
    :members:
 
-.. autoclass:: bunny_dns.IPGeoLocationInfo
+.. autoclass:: bunnydns.IPGeoLocationInfo
    :members:
 
-.. autoclass:: bunny_dns.GeolocationInfo
+.. autoclass:: bunnydns.GeolocationInfo
    :members:
 
-.. autoclass:: bunny_dns.EnvironmentalVariable
+.. autoclass:: bunnydns.EnvironmentalVariable
    :members:
 
 Enums
 -----
 
-.. autoclass:: bunny_dns.RecordType
+.. autoclass:: bunnydns.RecordType
    :members:
    :undoc-members:
 
-.. autoclass:: bunny_dns.MonitorStatus
+.. autoclass:: bunnydns.MonitorStatus
    :members:
    :undoc-members:
 
-.. autoclass:: bunny_dns.MonitorType
+.. autoclass:: bunnydns.MonitorType
    :members:
    :undoc-members:
 
-.. autoclass:: bunny_dns.SmartRoutingType
+.. autoclass:: bunnydns.SmartRoutingType
    :members:
    :undoc-members:
 
-.. autoclass:: bunny_dns.AccelerationStatus
+.. autoclass:: bunnydns.AccelerationStatus
    :members:
    :undoc-members:
 
-.. autoclass:: bunny_dns.LogAnonymizationType
+.. autoclass:: bunnydns.LogAnonymizationType
    :members:
    :undoc-members:
 
-.. autoclass:: bunny_dns.CertificateKeyType
+.. autoclass:: bunnydns.CertificateKeyType
    :members:
    :undoc-members:
 
 Exceptions
 ----------
 
-.. autoexception:: bunny_dns.BunnyDNSException
-.. autoexception:: bunny_dns.BunnyDNSAuthenticationError
-.. autoexception:: bunny_dns.BunnyDNSNotFoundError
-.. autoexception:: bunny_dns.BunnyDNSAPIError
+.. autoexception:: bunnydns.BunnyDNSException
+.. autoexception:: bunnydns.BunnyDNSAuthenticationError
+.. autoexception:: bunnydns.BunnyDNSNotFoundError
+.. autoexception:: bunnydns.BunnyDNSAPIError

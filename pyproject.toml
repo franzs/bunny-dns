@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "bunny-dns"
+name = "bunnydns"
 dynamic = ["version"]
 description = "Python SDK for the Bunny.net DNS API"
 readme = "README.md"
@@ -45,14 +45,14 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/franzs/bunny-dns"
-Documentation = "https://bunny-dns.readthedocs.io"
-Repository = "https://github.com/franzs/bunny-dns"
-Issues = "https://github.com/franzs/bunny-dns/issues"
-Changelog = "https://github.com/franzs/bunny-dns/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/franzs/bunnydns"
+Documentation = "https://bunnydns.readthedocs.io"
+Repository = "https://github.com/franzs/bunnydns"
+Issues = "https://github.com/franzs/bunnydns/issues"
+Changelog = "https://github.com/franzs/bunnydns/blob/main/CHANGELOG.md"
 
 [tool.hatch.version]
-path = "src/bunny_dns/__init__.py"
+path = "src/bunnydns/__init__.py"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -26,6 +26,6 @@ jobs:
       - name: Lint with ruff
         run: ruff check --ignore E501 src/ tests/
       - name: Type check with mypy
-        run: mypy src/bunny_dns/
+        run: mypy src/bunnydns/
       - name: Test with pytest
-        run: pytest --cov=bunny_dns --cov-report=xml
+        run: pytest --cov=bunnydns --cov-report=xml

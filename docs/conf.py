@@ -1,4 +1,4 @@
-project = "bunny-dns"
+project = "bunnydns"
 copyright = "2025, Your Name"
 author = "Your Name"
 

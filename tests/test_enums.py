@@ -2,7 +2,7 @@
 
 import pytest
 
-from bunny_dns.enums import (
+from bunnydns.enums import (
     AccelerationStatus,
     ACCELERATION_STATUS_BY_INT,
     CertificateKeyType,
@@ -18,7 +18,7 @@ from bunny_dns.enums import (
     SmartRoutingType,
     SMART_ROUTING_TYPE_BY_INT,
 )
-from bunny_dns._helpers import _enum_to_int, _parse_enum
+from bunnydns._helpers import _enum_to_int, _parse_enum
 
 
 # ---------------------------------------------------------------------------

@@ -5,7 +5,7 @@ import json
 import pytest
 import responses
 
-from bunny_dns import (
+from bunnydns import (
     BunnyDNS,
     BunnyDNSAPIError,
     BunnyDNSAuthenticationError,

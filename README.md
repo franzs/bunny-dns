@@ -1,8 +1,8 @@
-# bunny-dns
+# bunnydns
 
-[![PyPI version](https://badge.fury.io/py/bunny-dns.svg)](https://pypi.org/project/bunny-dns/)
-[![Tests](https://github.com/franzs/bunny-dns/actions/workflows/tests.yml/badge.svg)](https://github.com/franzs/bunny-dns/actions/workflows/tests.yml)
-[![Documentation](https://readthedocs.org/projects/bunny-dns/badge/?version=latest)](https://bunny-dns.readthedocs.io)
+[![PyPI version](https://badge.fury.io/py/bunnydns.svg)](https://pypi.org/project/bunnydns/)
+[![Tests](https://github.com/franzs/bunnydns/actions/workflows/tests.yml/badge.svg)](https://github.com/franzs/bunnydns/actions/workflows/tests.yml)
+[![Documentation](https://readthedocs.org/projects/bunnydns/badge/?version=latest)](https://bunnydns.readthedocs.io)
 [![License: GPL](https://img.shields.io/badge/License-GPL-yellow.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 A Python SDK for the [Bunny.net  DNS API](https://docs.bunny.net/api-reference/core/dns-zone/).
@@ -10,7 +10,7 @@ A Python SDK for the [Bunny.net  DNS API](https://docs.bunny.net/api-reference/c
 ## Installation
 
 ```bash
-pip install bunny-dns
+pip install bunnydns
 ```
 
 ## Quick Start
@@ -18,7 +18,7 @@ pip install bunny-dns
 ```Python
 #!/usr/bin/env python3
 
-from bunny_dns import BunnyDNS, DnsRecordInput, RecordType
+from bunnydns import BunnyDNS, DnsRecordInput, RecordType
 
 client = BunnyDNS(access_key="your-api-key")
 
@@ -51,7 +51,7 @@ print(ds.ds_record)
 
 ## Documentation
 
-Full documentation is available at bunny-dns.readthedocs.io.
+Full documentation is available at bunnydns.readthedocs.io.
 
 ## License
 

@@ -2,7 +2,7 @@
 
 Example
 -------
->>> from bunny_dns import BunnyDNS
+>>> from bunnydns import BunnyDNS
 >>> client = BunnyDNS(access_key="your-api-key")
 >>> zones = client.list_dns_zones()
 """

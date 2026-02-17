@@ -18,7 +18,7 @@ import uuid
 
 import pytest
 
-from bunny_dns import (
+from bunnydns import (
     AccelerationStatus,
     BunnyDNS,
     BunnyDNSAPIError,
@@ -33,7 +33,7 @@ from bunny_dns import (
     RecordType,
     SmartRoutingType,
 )
-from bunny_dns.models import (
+from bunnydns.models import (
     DnsRecord,
     DnsZone,
     DnsZoneImportResult,
@@ -60,7 +60,7 @@ pytestmark = [
 def _unique_domain() -> str:
     """Generate a unique throwaway domain for testing."""
     uid = uuid.uuid4().hex[:12]
-    return f"test-{uid}.example-bunny-dns-test.com"
+    return f"test-{uid}.example-bunnydns-test.com"
 
 
 @pytest.fixture(scope="module")

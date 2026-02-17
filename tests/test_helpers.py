@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 
 import pytest
 
-from bunny_dns._helpers import _parse_dt
+from bunnydns._helpers import _parse_dt
 
 
 class TestParseDt:
