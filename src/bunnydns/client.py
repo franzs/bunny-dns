@@ -2,22 +2,22 @@
 
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any
 
 import requests
 
+from ._helpers import _enum_to_int
 from .enums import (
-    CertificateKeyType,
     CERTIFICATE_KEY_TYPE_BY_INT,
-    LogAnonymizationType,
     LOG_ANONYMIZATION_TYPE_BY_INT,
+    CertificateKeyType,
+    LogAnonymizationType,
 )
 from .exceptions import (
     BunnyDNSAPIError,
     BunnyDNSAuthenticationError,
     BunnyDNSNotFoundError,
 )
-from ._helpers import _enum_to_int
 from .models import (
     DnsRecord,
     DnsRecordInput,
@@ -120,7 +120,7 @@ class BunnyDNS:
         self,
         page: int = 1,
         per_page: int = 1000,
-        search: Optional[str] = None,
+        search: str | None = None,
     ) -> DnsZoneList:
         """Retrieve a paginated list of DNS zones on the account.
 
@@ -175,14 +175,14 @@ class BunnyDNS:
     def update_dns_zone(
         self,
         zone_id: int,
-        custom_nameservers_enabled: Optional[bool] = None,
-        nameserver1: Optional[str] = None,
-        nameserver2: Optional[str] = None,
-        soa_email: Optional[str] = None,
-        logging_enabled: Optional[bool] = None,
-        logging_ip_anonymization_enabled: Optional[bool] = None,
-        log_anonymization_type: Optional[LogAnonymizationType] = None,
-        certificate_key_type: Optional[CertificateKeyType] = None,
+        custom_nameservers_enabled: bool | None = None,
+        nameserver1: str | None = None,
+        nameserver2: str | None = None,
+        soa_email: str | None = None,
+        logging_enabled: bool | None = None,
+        logging_ip_anonymization_enabled: bool | None = None,
+        log_anonymization_type: LogAnonymizationType | None = None,
+        certificate_key_type: CertificateKeyType | None = None,
     ) -> DnsZone:
         """Update the settings of an existing DNS zone.
 

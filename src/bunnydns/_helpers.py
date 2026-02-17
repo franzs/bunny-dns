@@ -4,14 +4,14 @@ from __future__ import annotations
 
 import enum
 from datetime import datetime
-from typing import Any, Optional
+from typing import Any
 
 
 def _parse_enum(
     enum_cls: type[enum.Enum],
     value: Any,
     int_map: dict[int, enum.Enum] | None = None,
-) -> Optional[enum.Enum]:
+) -> enum.Enum | None:
     """Return an *enum_cls* member from a string, int, or ``None``."""
     if value is None:
         return None
@@ -39,7 +39,7 @@ def _enum_to_int(member: enum.Enum, int_map: dict[int, enum.Enum]) -> int:
     raise ValueError(f"No integer mapping found for {member!r}")
 
 
-def _parse_dt(value: Any) -> Optional[datetime]:
+def _parse_dt(value: Any) -> datetime | None:
     """Parse an ISO-8601 datetime string returned by the Bunny API."""
     if value is None:
         return None

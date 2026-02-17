@@ -4,25 +4,25 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Any, Optional
+from typing import Any
 
-from .enums import (
-    AccelerationStatus,
-    ACCELERATION_STATUS_BY_INT,
-    CertificateKeyType,
-    CERTIFICATE_KEY_TYPE_BY_INT,
-    LogAnonymizationType,
-    LOG_ANONYMIZATION_TYPE_BY_INT,
-    MonitorStatus,
-    MONITOR_STATUS_BY_INT,
-    MonitorType,
-    MONITOR_TYPE_BY_INT,
-    RecordType,
-    RECORD_TYPE_BY_INT,
-    SmartRoutingType,
-    SMART_ROUTING_TYPE_BY_INT,
-)
 from ._helpers import _enum_to_int, _parse_dt, _parse_enum
+from .enums import (
+    ACCELERATION_STATUS_BY_INT,
+    CERTIFICATE_KEY_TYPE_BY_INT,
+    LOG_ANONYMIZATION_TYPE_BY_INT,
+    MONITOR_STATUS_BY_INT,
+    MONITOR_TYPE_BY_INT,
+    RECORD_TYPE_BY_INT,
+    SMART_ROUTING_TYPE_BY_INT,
+    AccelerationStatus,
+    CertificateKeyType,
+    LogAnonymizationType,
+    MonitorStatus,
+    MonitorType,
+    RecordType,
+    SmartRoutingType,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -32,13 +32,13 @@ from ._helpers import _enum_to_int, _parse_dt, _parse_enum
 class IPGeoLocationInfo:
     """Geolocation / ASN information for an IP address."""
     asn: int
-    country_code: Optional[str] = None
-    country: Optional[str] = None
-    organization_name: Optional[str] = None
-    city: Optional[str] = None
+    country_code: str | None = None
+    country: str | None = None
+    organization_name: str | None = None
+    city: str | None = None
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any] | None) -> Optional[IPGeoLocationInfo]:
+    def from_dict(cls, data: dict[str, Any] | None) -> IPGeoLocationInfo | None:
         if not data:
             return None
         return cls(
@@ -55,11 +55,11 @@ class GeolocationInfo:
     """Latitude / longitude geolocation information."""
     latitude: float
     longitude: float
-    country: Optional[str] = None
-    city: Optional[str] = None
+    country: str | None = None
+    city: str | None = None
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any] | None) -> Optional[GeolocationInfo]:
+    def from_dict(cls, data: dict[str, Any] | None) -> GeolocationInfo | None:
         if not data:
             return None
         return cls(
@@ -73,11 +73,11 @@ class GeolocationInfo:
 @dataclass(frozen=True)
 class EnvironmentalVariable:
     """Key / value pair attached to a Script record."""
-    name: Optional[str] = None
-    value: Optional[str] = None
+    name: str | None = None
+    value: str | None = None
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any] | None) -> Optional[EnvironmentalVariable]:
+    def from_dict(cls, data: dict[str, Any] | None) -> EnvironmentalVariable | None:
         if not data:
             return None
         return cls(name=data.get("Name"), value=data.get("Value"))
@@ -89,28 +89,28 @@ class EnvironmentalVariable:
 @dataclass
 class DnsRecordInput:
     """DNS record data used when creating or updating zones/records via the API."""
-    id: Optional[int] = None
-    type: Optional[RecordType] = None
-    ttl: Optional[int] = None
-    value: Optional[str] = None
-    name: Optional[str] = None
-    weight: Optional[int] = None
-    priority: Optional[int] = None
-    flags: Optional[int] = None
-    tag: Optional[str] = None
-    port: Optional[int] = None
-    pull_zone_id: Optional[int] = None
-    script_id: Optional[int] = None
-    accelerated: Optional[bool] = None
-    monitor_type: Optional[MonitorType] = None
-    geolocation_latitude: Optional[float] = None
-    geolocation_longitude: Optional[float] = None
-    latency_zone: Optional[str] = None
-    smart_routing_type: Optional[SmartRoutingType] = None
-    disabled: Optional[bool] = None
-    environmental_variables: Optional[list[EnvironmentalVariable]] = None
-    comment: Optional[str] = None
-    auto_ssl_issuance: Optional[bool] = None
+    id: int | None = None
+    type: RecordType | None = None
+    ttl: int | None = None
+    value: str | None = None
+    name: str | None = None
+    weight: int | None = None
+    priority: int | None = None
+    flags: int | None = None
+    tag: str | None = None
+    port: int | None = None
+    pull_zone_id: int | None = None
+    script_id: int | None = None
+    accelerated: bool | None = None
+    monitor_type: MonitorType | None = None
+    geolocation_latitude: float | None = None
+    geolocation_longitude: float | None = None
+    latency_zone: str | None = None
+    smart_routing_type: SmartRoutingType | None = None
+    disabled: bool | None = None
+    environmental_variables: list[EnvironmentalVariable] | None = None
+    comment: str | None = None
+    auto_ssl_issuance: bool | None = None
 
     def to_dict(self) -> dict[str, Any]:
         """Serialize to a dict suitable for the Bunny API JSON body.
@@ -189,21 +189,21 @@ class DnsRecord:
     geolocation_longitude: float
     disabled: bool
     auto_ssl_issuance: bool
-    type: Optional[RecordType] = None
-    value: Optional[str] = None
-    name: Optional[str] = None
+    type: RecordType | None = None
+    value: str | None = None
+    name: str | None = None
     flags: int = 0
-    tag: Optional[str] = None
-    link_name: Optional[str] = None
-    ip_geo_location_info: Optional[IPGeoLocationInfo] = None
-    geolocation_info: Optional[GeolocationInfo] = None
-    monitor_status: Optional[MonitorStatus] = None
-    monitor_type: Optional[MonitorType] = None
+    tag: str | None = None
+    link_name: str | None = None
+    ip_geo_location_info: IPGeoLocationInfo | None = None
+    geolocation_info: GeolocationInfo | None = None
+    monitor_status: MonitorStatus | None = None
+    monitor_type: MonitorType | None = None
     environmental_variables: list[EnvironmentalVariable] = field(default_factory=list)
-    latency_zone: Optional[str] = None
-    smart_routing_type: Optional[SmartRoutingType] = None
-    comment: Optional[str] = None
-    acceleration_status: Optional[AccelerationStatus] = None
+    latency_zone: str | None = None
+    smart_routing_type: SmartRoutingType | None = None
+    comment: str | None = None
+    acceleration_status: AccelerationStatus | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> DnsRecord:
@@ -264,21 +264,21 @@ class DnsRecord:
 class DnsZone:
     """Represents a single DNS zone."""
     id: int
-    date_modified: Optional[datetime]
-    date_created: Optional[datetime]
+    date_modified: datetime | None
+    date_created: datetime | None
     nameservers_detected: bool
     custom_nameservers_enabled: bool
-    nameservers_next_check: Optional[datetime]
+    nameservers_next_check: datetime | None
     logging_enabled: bool
     logging_ip_anonymization_enabled: bool
     dns_sec_enabled: bool
-    domain: Optional[str] = None
+    domain: str | None = None
     records: list[DnsRecord] = field(default_factory=list)
-    nameserver1: Optional[str] = None
-    nameserver2: Optional[str] = None
-    soa_email: Optional[str] = None
-    log_anonymization_type: Optional[LogAnonymizationType] = None
-    certificate_key_type: Optional[CertificateKeyType] = None
+    nameserver1: str | None = None
+    nameserver2: str | None = None
+    soa_email: str | None = None
+    log_anonymization_type: LogAnonymizationType | None = None
+    certificate_key_type: CertificateKeyType | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> DnsZone:
@@ -367,10 +367,10 @@ class DnsSecDsRecord:
     key_tag: int
     flags: int
     ds_configured: bool
-    ds_record: Optional[str] = None
-    digest: Optional[str] = None
-    digest_type: Optional[str] = None
-    public_key: Optional[str] = None
+    ds_record: str | None = None
+    digest: str | None = None
+    digest_type: str | None = None
+    public_key: str | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> DnsSecDsRecord:
