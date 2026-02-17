@@ -39,8 +39,14 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"></div>
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/enums.html">Enumerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/exceptions.html">Exceptions</a></li>
+</ul>
+
         </div>
       </div>
     </nav>
@@ -74,7 +80,7 @@
 
 
 <div class="viewcode-block" id="RecordType">
-<a class="viewcode-back" href="../../enums.html#bunnydns.RecordType">[docs]</a>
+<a class="viewcode-back" href="../../api/enums.html#bunnydns.RecordType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">RecordType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;DNS record type.&quot;&quot;&quot;</span>
     <span class="n">A</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
@@ -117,7 +123,7 @@
 
 
 <div class="viewcode-block" id="MonitorStatus">
-<a class="viewcode-back" href="../../enums.html#bunnydns.MonitorStatus">[docs]</a>
+<a class="viewcode-back" href="../../api/enums.html#bunnydns.MonitorStatus">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MonitorStatus</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Health-monitor status of a DNS record.&quot;&quot;&quot;</span>
     <span class="n">UNKNOWN</span> <span class="o">=</span> <span class="s2">&quot;Unknown&quot;</span>
@@ -134,7 +140,7 @@
 
 
 <div class="viewcode-block" id="MonitorType">
-<a class="viewcode-back" href="../../enums.html#bunnydns.MonitorType">[docs]</a>
+<a class="viewcode-back" href="../../api/enums.html#bunnydns.MonitorType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MonitorType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Health-monitor type of a DNS record.&quot;&quot;&quot;</span>
     <span class="n">NONE</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
@@ -153,7 +159,7 @@
 
 
 <div class="viewcode-block" id="SmartRoutingType">
-<a class="viewcode-back" href="../../enums.html#bunnydns.SmartRoutingType">[docs]</a>
+<a class="viewcode-back" href="../../api/enums.html#bunnydns.SmartRoutingType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SmartRoutingType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Smart routing mode for a DNS record.&quot;&quot;&quot;</span>
     <span class="n">NONE</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
@@ -170,7 +176,7 @@
 
 
 <div class="viewcode-block" id="AccelerationStatus">
-<a class="viewcode-back" href="../../enums.html#bunnydns.AccelerationStatus">[docs]</a>
+<a class="viewcode-back" href="../../api/enums.html#bunnydns.AccelerationStatus">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AccelerationStatus</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Acceleration status of a DNS record.&quot;&quot;&quot;</span>
     <span class="n">NONE</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
@@ -191,7 +197,7 @@
 
 
 <div class="viewcode-block" id="LogAnonymizationType">
-<a class="viewcode-back" href="../../enums.html#bunnydns.LogAnonymizationType">[docs]</a>
+<a class="viewcode-back" href="../../api/enums.html#bunnydns.LogAnonymizationType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LogAnonymizationType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Log anonymization mode for a DNS zone.&quot;&quot;&quot;</span>
     <span class="n">ONE_DIGIT</span> <span class="o">=</span> <span class="s2">&quot;OneDigit&quot;</span>
@@ -206,7 +212,7 @@
 
 
 <div class="viewcode-block" id="CertificateKeyType">
-<a class="viewcode-back" href="../../enums.html#bunnydns.CertificateKeyType">[docs]</a>
+<a class="viewcode-back" href="../../api/enums.html#bunnydns.CertificateKeyType">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">CertificateKeyType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Private-key type used for automatic TLS certificates.&quot;&quot;&quot;</span>
     <span class="n">ECDSA</span> <span class="o">=</span> <span class="s2">&quot;Ecdsa&quot;</span>
