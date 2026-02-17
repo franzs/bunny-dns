@@ -1,9 +1,9 @@
 # bunnydns
 
 [![PyPI version](https://badge.fury.io/py/bunnydns.svg)](https://pypi.org/project/bunnydns/)
-[![Tests](https://github.com/franzs/bunnydns/actions/workflows/tests.yml/badge.svg)](https://github.com/franzs/bunnydns/actions/workflows/tests.yml)
+[![Tests](https://github.com/franzs/bunnydns/actions/workflows/tests.yaml/badge.svg)](https://github.com/franzs/bunnydns/actions/workflows/tests.yaml)
 [![Documentation](https://readthedocs.org/projects/bunnydns/badge/?version=latest)](https://bunnydns.readthedocs.io)
-[![License: GPL](https://img.shields.io/badge/License-GPL-yellow.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![License: GPL](https://img.shields.io/badge/License-GPL-yellow.svg)](https://github.com/franzs/bunnydns?tab=GPL-3.0-1-ov-file)
 
 A Python SDK for the [Bunny.net  DNS API](https://docs.bunny.net/api-reference/core/dns-zone/).
 
@@ -51,8 +51,8 @@ print(ds.ds_record)
 
 ## Documentation
 
-Full documentation is available at bunnydns.readthedocs.io.
+Full documentation is available at https://franzs.github.io/bunnydns/.
 
 ## License
 
-GPL License. See [LICENSE](./LICENSE) for details.
+GPL License. See [LICENSE](https://github.com/franzs/bunnydns?tab=GPL-3.0-1-ov-file) for details.
