@@ -19,7 +19,6 @@ import uuid
 import pytest
 
 from bunnydns import (
-    AccelerationStatus,
     BunnyDNS,
     BunnyDNSAPIError,
     BunnyDNSAuthenticationError,
@@ -28,10 +27,7 @@ from bunnydns import (
     DnsRecordInput,
     DnsSecDsRecord,
     LogAnonymizationType,
-    MonitorStatus,
-    MonitorType,
     RecordType,
-    SmartRoutingType,
 )
 from bunnydns.models import (
     DnsRecord,
@@ -39,7 +35,6 @@ from bunnydns.models import (
     DnsZoneImportResult,
     DnsZoneList,
 )
-
 
 # ---------------------------------------------------------------------------
 # Markers & fixtures

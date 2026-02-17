@@ -2,23 +2,23 @@
 
 import pytest
 
-from bunnydns.enums import (
-    AccelerationStatus,
-    ACCELERATION_STATUS_BY_INT,
-    CertificateKeyType,
-    CERTIFICATE_KEY_TYPE_BY_INT,
-    LogAnonymizationType,
-    LOG_ANONYMIZATION_TYPE_BY_INT,
-    MonitorStatus,
-    MONITOR_STATUS_BY_INT,
-    MonitorType,
-    MONITOR_TYPE_BY_INT,
-    RecordType,
-    RECORD_TYPE_BY_INT,
-    SmartRoutingType,
-    SMART_ROUTING_TYPE_BY_INT,
-)
 from bunnydns._helpers import _enum_to_int, _parse_enum
+from bunnydns.enums import (
+    ACCELERATION_STATUS_BY_INT,
+    CERTIFICATE_KEY_TYPE_BY_INT,
+    LOG_ANONYMIZATION_TYPE_BY_INT,
+    MONITOR_STATUS_BY_INT,
+    MONITOR_TYPE_BY_INT,
+    RECORD_TYPE_BY_INT,
+    SMART_ROUTING_TYPE_BY_INT,
+    AccelerationStatus,
+    CertificateKeyType,
+    LogAnonymizationType,
+    MonitorStatus,
+    MonitorType,
+    RecordType,
+    SmartRoutingType,
+)
 
 
 # ---------------------------------------------------------------------------

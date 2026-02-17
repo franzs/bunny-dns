@@ -2,8 +2,6 @@
 
 from datetime import datetime, timezone
 
-import pytest
-
 from bunnydns._helpers import _parse_dt
 
 
