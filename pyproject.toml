@@ -71,3 +71,34 @@ select = ["E", "F", "I", "N", "W", "UP"]
 [tool.mypy]
 python_version = "3.10"
 strict = true
+
+# ---------------------------------------------------------------------------
+# Semantic Release
+# ---------------------------------------------------------------------------
+[tool.semantic_release]
+version_toml = []
+version_variables = [
+    "src/bunnydns/__init__.py:__version__",
+]
+branch = "main"
+build_command = "pip install build && python -m build"
+commit_message = "chore(release): v{version} [skip ci]"
+
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "refactor",
+    "style",
+    "test",
+]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
