@@ -107,6 +107,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">IPGeoLocationInfo</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Geolocation / ASN information for an IP address.&quot;&quot;&quot;</span>
+
     <span class="n">asn</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">country_code</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">country</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
@@ -132,6 +133,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">GeolocationInfo</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Latitude / longitude geolocation information.&quot;&quot;&quot;</span>
+
     <span class="n">latitude</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">longitude</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">country</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
@@ -155,6 +157,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">EnvironmentalVariable</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Key / value pair attached to a Script record.&quot;&quot;&quot;</span>
+
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">value</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -174,6 +177,7 @@
 <span class="nd">@dataclass</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">DnsRecordInput</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;DNS record data used when creating or updating zones/records via the API.&quot;&quot;&quot;</span>
+
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="nb">type</span><span class="p">:</span> <span class="n">RecordType</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">ttl</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
@@ -249,8 +253,7 @@
             <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Disabled&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">disabled</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">environmental_variables</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">data</span><span class="p">[</span><span class="s2">&quot;EnviromentalVariables&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">ev</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;Value&quot;</span><span class="p">:</span> <span class="n">ev</span><span class="o">.</span><span class="n">value</span><span class="p">}</span>
-                <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">environmental_variables</span>
+                <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="n">ev</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;Value&quot;</span><span class="p">:</span> <span class="n">ev</span><span class="o">.</span><span class="n">value</span><span class="p">}</span> <span class="k">for</span> <span class="n">ev</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">environmental_variables</span>
             <span class="p">]</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">comment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Comment&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">comment</span>
@@ -269,6 +272,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">DnsRecord</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A single DNS record inside a zone.&quot;&quot;&quot;</span>
+
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">ttl</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">weight</span><span class="p">:</span> <span class="nb">int</span>
@@ -322,16 +326,12 @@
             <span class="n">flags</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Flags&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
             <span class="n">tag</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Tag&quot;</span><span class="p">),</span>
             <span class="n">link_name</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LinkName&quot;</span><span class="p">),</span>
-            <span class="n">ip_geo_location_info</span><span class="o">=</span><span class="n">IPGeoLocationInfo</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
-                <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;IPGeoLocationInfo&quot;</span><span class="p">)</span>
-            <span class="p">),</span>
+            <span class="n">ip_geo_location_info</span><span class="o">=</span><span class="n">IPGeoLocationInfo</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;IPGeoLocationInfo&quot;</span><span class="p">)),</span>
             <span class="n">geolocation_info</span><span class="o">=</span><span class="n">GeolocationInfo</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GeolocationInfo&quot;</span><span class="p">)),</span>
             <span class="n">monitor_status</span><span class="o">=</span><span class="n">_parse_enum</span><span class="p">(</span>
                 <span class="n">MonitorStatus</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MonitorStatus&quot;</span><span class="p">),</span> <span class="n">MONITOR_STATUS_BY_INT</span>
             <span class="p">),</span>
-            <span class="n">monitor_type</span><span class="o">=</span><span class="n">_parse_enum</span><span class="p">(</span>
-                <span class="n">MonitorType</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MonitorType&quot;</span><span class="p">),</span> <span class="n">MONITOR_TYPE_BY_INT</span>
-            <span class="p">),</span>
+            <span class="n">monitor_type</span><span class="o">=</span><span class="n">_parse_enum</span><span class="p">(</span><span class="n">MonitorType</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;MonitorType&quot;</span><span class="p">),</span> <span class="n">MONITOR_TYPE_BY_INT</span><span class="p">),</span>
             <span class="n">environmental_variables</span><span class="o">=</span><span class="n">env_vars</span><span class="p">,</span>
             <span class="n">latency_zone</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LatencyZone&quot;</span><span class="p">),</span>
             <span class="n">smart_routing_type</span><span class="o">=</span><span class="n">_parse_enum</span><span class="p">(</span>
@@ -357,6 +357,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">DnsZone</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a single DNS zone.&quot;&quot;&quot;</span>
+
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">date_modified</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">|</span> <span class="kc">None</span>
     <span class="n">date_created</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">|</span> <span class="kc">None</span>
@@ -386,9 +387,7 @@
             <span class="n">custom_nameservers_enabled</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CustomNameserversEnabled&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
             <span class="n">nameservers_next_check</span><span class="o">=</span><span class="n">_parse_dt</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;NameserversNextCheck&quot;</span><span class="p">)),</span>
             <span class="n">logging_enabled</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LoggingEnabled&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-            <span class="n">logging_ip_anonymization_enabled</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-                <span class="s2">&quot;LoggingIPAnonymizationEnabled&quot;</span><span class="p">,</span> <span class="kc">False</span>
-            <span class="p">),</span>
+            <span class="n">logging_ip_anonymization_enabled</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;LoggingIPAnonymizationEnabled&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
             <span class="n">dns_sec_enabled</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;DnsSecEnabled&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
             <span class="n">domain</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Domain&quot;</span><span class="p">),</span>
             <span class="n">records</span><span class="o">=</span><span class="n">records</span><span class="p">,</span>
@@ -417,6 +416,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">DnsZoneList</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Paginated list of :class:`DnsZone` objects.&quot;&quot;&quot;</span>
+
     <span class="n">current_page</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">total_items</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">has_more_items</span><span class="p">:</span> <span class="nb">bool</span>
@@ -443,6 +443,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">DnsZoneImportResult</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Result of a DNS zone import operation.&quot;&quot;&quot;</span>
+
     <span class="n">records_successful</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">records_failed</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">records_skipped</span><span class="p">:</span> <span class="nb">int</span>
@@ -465,6 +466,7 @@
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">DnsSecDsRecord</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;DNSSEC DS record information for a DNS zone.&quot;&quot;&quot;</span>
+
     <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span>
     <span class="n">algorithm</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">key_tag</span><span class="p">:</span> <span class="nb">int</span>

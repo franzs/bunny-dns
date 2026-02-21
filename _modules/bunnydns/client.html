@@ -344,9 +344,7 @@
 <span class="sd">        zone_id:</span>
 <span class="sd">            The ID of the DNS zone to export.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">result</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
-            <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/export&quot;</span><span class="p">,</span> <span class="n">raw_response</span><span class="o">=</span><span class="kc">True</span>
-        <span class="p">)</span>
+        <span class="n">result</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/export&quot;</span><span class="p">,</span> <span class="n">raw_response</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span></div>
 
 
@@ -368,9 +366,7 @@
 
 <div class="viewcode-block" id="BunnyDNS.import_dns_records">
 <a class="viewcode-back" href="../../api/client.html#bunnydns.BunnyDNS.import_dns_records">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">import_dns_records</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">zone_file</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DnsZoneImportResult</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">import_dns_records</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">zone_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DnsZoneImportResult</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Import DNS records from a BIND zone file.</span>
 
 <span class="sd">        Parameters</span>
@@ -380,9 +376,7 @@
 <span class="sd">        zone_file:</span>
 <span class="sd">            The zone file content as a string.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
-            <span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/import&quot;</span><span class="p">,</span> <span class="n">text_body</span><span class="o">=</span><span class="n">zone_file</span>
-        <span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/import&quot;</span><span class="p">,</span> <span class="n">text_body</span><span class="o">=</span><span class="n">zone_file</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">DnsZoneImportResult</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
 
 
@@ -400,17 +394,13 @@
 <span class="sd">        record:</span>
 <span class="sd">            The DNS record data to create.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span>
-            <span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/records&quot;</span><span class="p">,</span> <span class="n">json_body</span><span class="o">=</span><span class="n">record</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
-        <span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;/dnszone/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s2">/records&quot;</span><span class="p">,</span> <span class="n">json_body</span><span class="o">=</span><span class="n">record</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
         <span class="k">return</span> <span class="n">DnsRecord</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="BunnyDNS.update_dns_record">
 <a class="viewcode-back" href="../../api/client.html#bunnydns.BunnyDNS.update_dns_record">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">update_dns_record</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record</span><span class="p">:</span> <span class="n">DnsRecordInput</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_dns_record</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zone_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">record</span><span class="p">:</span> <span class="n">DnsRecordInput</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Update an existing DNS record.</span>
 
 <span class="sd">        Parameters</span>
